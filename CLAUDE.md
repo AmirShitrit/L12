@@ -11,4 +11,5 @@
    - Don't mix and match different levels of abstraction.
      Each function should stick to a single level of abstraction, delegating to sub-functions, if necessary.
    - The code should be efficient. For example, try to cache the results of repeated queries that don't change often.
-5. 
+5. Do not commit code. Only modify files and let me do the committing.
+6. Output feedback on this file, prompts and the PRD.md file to FEEDBACK.md in the root folder of the project.
