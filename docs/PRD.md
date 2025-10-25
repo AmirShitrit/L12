@@ -102,10 +102,10 @@ This is the first version of the agent, designed for simplicity while keeping fu
 
 ## 7. Future Enhancements
 
+
 - Support for other Gmail labels/folders.
 - Automatic or scheduled runs.
 - Richer criteria (date ranges, attachments, etc.).
 - Additional actions: mark as read, label, archive, forward, summarize, respond.
 - Web or chat-based interface.
 - Persistent configuration file for default settings.
-
