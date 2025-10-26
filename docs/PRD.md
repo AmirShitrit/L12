@@ -50,6 +50,7 @@ This is the first version of the agent, designed for simplicity while keeping fu
 - Print results as a **formatted table** in the console.
 - If no messages match, display:
   > No results found.
+- README.md file
 
 ### 3.5 Execution Mode
 

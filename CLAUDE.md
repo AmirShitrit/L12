@@ -2,7 +2,8 @@
 
 1. Use the uv virtual environment for managing packages and running the project.
 2. Before modifying any files, show me your plan first and wait for my approval.
-3. For every change/addition to the code behavior, add a unit test first, and see that it fails.
+3. For every change/addition to the code behavior that involves pure logic (w/out side-effects), add a unit test first, and see that it fails.
+   - If needed, make the code more testable by pushing side-effects to the edges using something like the Onion Architecture, or something simpler, when relevant.
 4. When writing code:
    - Follow clean code and SOLID principles. 
    - Keep the code simple and readable.
