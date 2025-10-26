@@ -205,3 +205,7 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Gmail Agent - Sensitive files
+creds.json
+token.enc

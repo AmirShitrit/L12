@@ -33,8 +33,10 @@ This is the first version of the agent, designed for simplicity while keeping fu
 
 - The user provides a prompt describing what to look for, such as:
   > show me unread messages from Google last week
+- Supported languages: English and Hebrew
 - The agent uses **Google ADK** to interpret the natural language and convert it into a Gmail search query string (e.g.,
   `from:google.com is:unread newer_than:7d`).
+- The agent should print the resulted Gmail search query
 - Only messages from the **Inbox** are considered in this version.
 
 ### 3.3 Message Retrieval

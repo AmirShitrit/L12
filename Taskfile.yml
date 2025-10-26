@@ -1,0 +1,54 @@
+version: '3'
+
+tasks:
+  agent:
+    desc: Run the Gmail AI agent (interactive mode if no stdin)
+    cmds:
+      - python -m gmail_agent.main
+
+  search:
+    desc: Search emails with a query (usage - task search QUERY="your query here")
+    cmds:
+      - echo "{{.QUERY}}" | python -m gmail_agent.main
+
+  search-example:
+    task:
+    cmds:
+      - task: search
+        vars:
+          QUERY: emails with attached PDF file(s) from the past week
+
+  test:
+    desc: Run all tests
+    cmds:
+      - pytest
+
+  test-verbose:
+    desc: Run all tests with verbose output
+    cmds:
+      - pytest -v
+
+  test-coverage:
+    desc: Run tests with coverage report
+    cmds:
+      - pytest --cov=gmail_agent --cov-report=html --cov-report=term
+
+  install:
+    desc: Install dependencies using uv
+    cmds:
+      - uv pip install -e ".[dev]"
+
+  clean:
+    desc: Clean up cache and temporary files
+    cmds:
+      - rm -rf .pytest_cache
+      - rm -rf htmlcov
+      - rm -rf .coverage
+      - find . -type d -name __pycache__ -exec rm -rf {} +
+      - find . -type f -name "*.pyc" -delete
+
+  setup:
+    desc: Complete setup - install deps and run tests
+    cmds:
+      - task: install
+      - task: test
